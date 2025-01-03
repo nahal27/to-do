@@ -46,8 +46,8 @@ export const getAllTasks = createAsyncThunk(
         console.log('all taskssssss: ', data);
         return data;}
         else{
-          const tasks = JSON.parse(localStorage.getItem('task')) || [];
-          dispatchEvent(setTasks(tasks));
+          const tasks = JSON.parse(localStorage.getItem('task')) ;
+          // dispatchEvent(setTasks(tasks));
           return tasks;
         }
   }

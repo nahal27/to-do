@@ -80,9 +80,9 @@ export default function TodoList() {
         </div>
 
         <ul className="mt-6 space-y-4">
-          {tasks.map((task) => (
+          {tasks.map((task, index) => (
             <li
-              key={task._id}
+              key={task._id || index}
               className="flex justify-between items-center p-3 bg-white rounded-lg shadow-md"
             >
               {editingTaskId === task._id ? ( 
